@@ -1,5 +1,4 @@
-/* CABEÇALHO ============================================================================ */
-
+/* CABEÇALHO */
 
 .cabecalho__container {
     display: flex;
@@ -9,12 +8,11 @@
     top: 0;
 }
 
-
 .cabecalho__pesquisar__item {
     display: none;
 }
 
-/* MENU ASIDE ============================================================================ */
+/* MENU */
 
 .menu__container {
     position: fixed;
@@ -44,11 +42,8 @@
 .menu__lista:nth-child(4) {
     display: none;
 }
-/* deixando apenas a primeira lista aparecendo no mobile, usando nth-child e marcando no () o número da clase */
 
-
-
-/* SEÇÃO SUPERIOR ============================================================================ */
+/* SEÇÃO SUPERIOR */
 
 .superior__secao__container {
     display: flex;
@@ -58,10 +53,7 @@
     gap: 15px;
 }
 
-
-
-/* RODAPÉ ============================================================================ */
-
+/* RODAPÉ */
 
 .rodape__container {
     display: flex;
@@ -70,55 +62,31 @@
     flex-flow: column wrap;
 }
 
-
-
-
-
-@media (min-width: 1440px) {
-
-    .menu__container {
-        width: 239px;
-        overflow: scroll;
-    }
-
-    
-.menu__lista:nth-child(2),
-.menu__lista:nth-child(3),
-.menu__lista:nth-child(4) {
-    display: flex;
-}
-
-.menu__lista {
-    height: auto;
-    padding: 10px 17px 20px 15px;
-    gap: 15px;
-}
-
-.menu__itens {
-    flex-direction: row;
-    gap: 15px;
-    align-items: center ;
-}
-
-
-}
-
-
-
-
-
-
-
 @media (min-width: 834px) {
 
-    /* CABEÇALHO ============================================================================ */
+    /* CABEÇALHO */
 
     .cabecalho__pesquisar__item {
         display: block;
     }
 
-    /* RODAPÉ ============================================================================ */
+    /* MENU LATERAL ADICIONADO NA ATIVIDADE EXTRA */
 
+    .menu__container {
+        left: 0;
+        height: auto;
+        width: 74px;
+        top: 80px;
+    }
+
+    .menu__lista {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 15px;
+        gap: 33px;
+    }
+
+    /* RODAPÉ */
 
     .rodape__container {
         justify-content: space-between;
@@ -126,5 +94,52 @@
 
 }
 
+    @media(min-width: 1440px) {
 
+        /* MENU LATERAL */ 
 
+        .menu__container {
+            width: 239px;
+            overflow: scroll;
+        }
+
+        .menu__lista:nth-child(2),
+        .menu__lista:nth-child(3),
+        .menu__lista:nth-child(4) {
+            display: flex;
+        }
+
+        .menu__lista {
+            height: auto;
+            padding: 20px 17px 20px 15px;
+            gap: 15px;
+        }
+
+        .menu__itens {
+            flex-direction: row;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .menu__lista:nth-child(3) {
+            flex-direction: column-reverse;
+        }
+
+        .jogos {
+            order: 3;
+        }
+
+        .filmes {
+            order: 2;
+        }
+
+        .premium {
+            order: 1;
+        }
+
+        .maispagina {
+            order: 4;
+        }
+
+    }
+    
