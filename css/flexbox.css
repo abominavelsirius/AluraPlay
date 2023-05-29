@@ -7,4 +7,25 @@
 }
 
 
+.cabecalho__pesquisar__item {
+    display: none;
+}
+
+
+.rodape__container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+}
+
+
+@media (min-width: 834px) {
+
+    .cabecalho__pesquisar__item {
+        display: block;
+    }
+
+}
+
+
 
